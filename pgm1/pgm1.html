@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="HJR">
+  <meta name="Keywords" content="HTML, JavaScript">
+  <meta name="Description" content="A Simple Calculator">
+  <title>Calculator</title>
+  <script>
+var prev="";
+var cur=0;
+function myFunction1(x)
+{
+	document.getElementById("AC").innerHTML="C";
+	if(x==-1)
+	{
+		x*=cur;
+		prev=x+"";
+		document.getElementById("res").innerHTML=x;
+	}
+	else
+	{
+	cur=prev.concat(x);
+	prev=cur;
+	document.getElementById("res").innerHTML=cur;
+	}
+}
+		 
+function mclear()
+{
+prev="";
+document.getElementById("AC").innerHTML="AC";
+document.getElementById("res").innerHTML="0";
+}
+
+function myResult()
+{
+	var str=document.getElementById("res").innerHTML;
+	var pat=/\d+[+|*|/|%|-]\d+/;
+	var result = str.match(pat); 
+	if(!result){
+	document.getElementById("res").innerHTML="ERROR";
+	//return;
+	}
+	cur=eval(str);
+	prev=cur+"";
+document.getElementById("res").innerHTML=cur;
+}
+</script>
+ </head>
+ <body>
+ <form>
+ <caption>CALCULATOR</caption>
+
+ <table border="1"> <!--style="background-color:black" style="foreground-color:white"-->
+ 
+ <tr><td colspan="4" style="text-align:right" ><label id="res" value="0">0</label></td></tr>
+ <tr style="text-align:center"><td><button type="button" id="AC" value="AC" onclick=mclear()>AC</button></td>
+ <td><button type="button" id="plsmns" value="+" onclick=myFunction1("-1")>+/-</button></td>
+ <td><button type="button" id="per" value="%" onclick=myFunction1("%")>%</button></td>
+ <td><button type="button" id="div" value="/" onclick=myFunction1("/")>/</button></td>
+ </tr>
+
+  <tr style="text-align:center">
+  <td><button type="button" id="seven" value="7" onclick=myFunction1("7")> 7</button></td>
+  <td><button type="button" id="eight" value="8" onclick=myFunction1("8")>8</button></td>
+  <td><button type="button" id="nine" value="9" onclick=myFunction1("9")>9</button></td>
+  <td><button type="button" id="mul" value="*" onclick=myFunction1("*")>X</button></td>
+  </tr>
+
+  <tr style="text-align:center">
+  <td><button type="button" id="four" value="4" onclick=myFunction1("4")>4</button></td>
+  <td><button type="button" id="five" value="5" onclick=myFunction1("5")>5</button></td>
+  <td><button type="button" id="six" value="6" onclick=myFunction1("6")>6</button></td>
+  <td><button type="button" id="minus" value="-" onclick=myFunction1('-')>-</button></td>
+  </tr>
+
+    <tr style="text-align:center">
+	<td><button type="button" id="one" value="1" onclick=myFunction1("1")>1</button></td>
+	<td><button type="button" id="two" value="2" onclick=myFunction1("2")>2</button></td>
+	<td><button type="button" id="three" value="3" onclick=myFunction1("3")>3</button></td>
+	<td><button type="button" id="plus" value="+" onclick=myFunction1("+")>+</button></td>
+	</tr>
+
+  <tr style="text-align:center">
+  <td colspan="2"><button type="button" id="zero" value="0" onclick=myFunction1("0")>0</button></td>
+  <td><button type="button" id="point" value="." onclick=myFunction1(".")>.</button></td>
+  <td><button type="button" id="equals" value="=" onclick=myResult()>=</button></td>
+  </tr>
+
+
+ </table>
+  </form>
+ </body>
+</html>
