@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="5.css"?>
+<html>
+<head>
+<h1>STUDENTS DESCRIPTION</h1>
+</head>
+<students>
+   <student>
+     <USN>usn         :1CE17CS090</USN>
+     <NAME>name       :Prerana </NAME>
+     <College>COLLEGE :CEC </College>
+     <branch>BRANCH   :CSE</branch>
+     <year>YEAR       :2017</year>
+     <e-mail>E-MAIL   :preranaprasad.18@gmail.com</e-mail>
+   </student>
+   <student>
+     <USN>usn         :1CE17EC080</USN>
+     <NAME>name       :Pooja </NAME>
+     <College>COLLEGE :CEC </College>
+     <branch>BRANCH   :ECE</branch>
+     <year>YEAR       :2008</year>
+     <e-mail>E-MAIL   :pooja18@gmail.com</e-mail>
+   </student>
+   <student>
+     <USN>usn         :1CE17ME090</USN>
+     <NAME>name       :Pinkie </NAME>
+     <College>COLLEGE :CEC </College>
+     <branch>BRANCH   :ME</branch>
+     <year>YEAR       :2009</year>
+     <e-mail>E-MAIL   :pinkie318@gmail.com</e-mail>
+   </student>
+</students>
+</html>
